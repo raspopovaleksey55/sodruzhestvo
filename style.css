@@ -1,0 +1,178 @@
+/* ОРОО «ЦКПП Содружество» — сайт организации. Без внешних библиотек и шрифтов. */
+
+:root {
+  --ink: #241f1a;
+  --muted: #6a6055;
+  --paper: #ffffff;
+  --sand: #f6f2ea;
+  --line: #ddd3c4;
+  --brown: #6b4f2a;
+  --brown-dark: #4a3720;
+  --accent: #8c2f24;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--sand);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+/* шапка */
+.top {
+  background: var(--brown-dark);
+  color: #f2ece2;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 14px;
+}
+.top .wrap { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 8px 20px; }
+.top a { color: #f2ece2; text-decoration: none; border-bottom: 1px dotted #b9a888; }
+
+header.site {
+  background: var(--paper);
+  border-bottom: 3px solid var(--brown);
+}
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  flex-wrap: wrap;
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand .mark {
+  width: auto; height: 65px; flex: 0 0 auto;
+  display: block;
+}
+.brand b {
+  display: block; font-size: 20px; line-height: 1.2; color: var(--brown-dark);
+}
+.brand span { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 13px; color: var(--muted); }
+
+nav.main { font-family: "Segoe UI", Tahoma, sans-serif; }
+nav.main ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; }
+nav.main a {
+  display: block; padding: 8px 12px; text-decoration: none;
+  color: var(--brown-dark); border-radius: 4px; font-size: 15px;
+}
+nav.main a:hover { background: var(--sand); }
+nav.main a[aria-current="page"] { background: var(--brown); color: #fff; }
+
+/* содержимое */
+main { background: var(--paper); }
+main .wrap { padding: 34px 20px 44px; }
+
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 18px; color: var(--brown-dark); }
+h2 { font-size: 22px; margin: 34px 0 12px; color: var(--brown-dark); }
+h3 { font-size: 19px; margin: 24px 0 8px; }
+p { margin: 0 0 14px; }
+ul, ol { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 6px; }
+.lead { font-size: 19px; color: #3b332a; }
+
+/* первый экран */
+.hero {
+  background: linear-gradient(180deg, #f2ece0 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--line);
+}
+.hero .wrap { padding: 40px 20px 34px; }
+.hero h1 { font-size: 34px; max-width: 780px; }
+.hero p { max-width: 760px; font-size: 19px; color: #3b332a; }
+
+/* карточки */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 20px 0 8px; }
+.card {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--brown);
+  border-radius: 4px;
+  padding: 16px 18px;
+  background: #fffdf9;
+}
+.card h3 { margin-top: 0; }
+.card .num { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 26px; color: var(--accent); font-weight: 700; }
+
+/* таблица фактов */
+.facts { width: 100%; border-collapse: collapse; margin: 16px 0 22px; font-size: 16px; }
+.facts th, .facts td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.facts th { width: 300px; font-weight: 600; color: var(--brown-dark); background: #fbf8f2; }
+
+/* проекты */
+.project { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 26px; }
+.project .meta { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.project h3 { margin: 0 0 6px; }
+
+/* ссылки-списки */
+.links { list-style: none; padding: 0; }
+.links li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.links a { text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+.links .src { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 13px; color: var(--muted); display: block; }
+
+/* галерея */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 18px 0; }
+.gallery figure { margin: 0; }
+.gallery img { border-radius: 4px; }
+.gallery figcaption { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 13px; color: var(--muted); padding-top: 6px; }
+
+/* плашка-заглушка, если фото ещё не добавлено */
+.slot {
+  border: 2px dashed var(--line);
+  border-radius: 4px;
+  min-height: 160px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted);
+  font-family: "Segoe UI", Tahoma, sans-serif; font-size: 14px;
+  text-align: center; padding: 14px;
+  background: #fbf8f2;
+}
+
+/* выделение */
+.note {
+  background: #fbf8f2;
+  border-left: 4px solid var(--brown);
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+/* подвал */
+footer.site {
+  background: var(--brown-dark);
+  color: #e6ddcf;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 14px;
+}
+footer.site .wrap { padding: 26px 20px; display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; }
+footer.site a { color: #f2ece2; }
+footer.site .small { color: #bfae95; font-size: 13px; }
+
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  h1 { font-size: 25px; }
+  .hero h1 { font-size: 27px; }
+  .facts th { width: auto; display: block; border-bottom: none; padding-bottom: 2px; }
+  .facts td { display: block; padding-top: 0; }
+}
+
+/* знак организации без картинки — текстовый */
+.brand .mark.text {
+  width: 58px; height: 58px; flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--brown); border-radius: 6px;
+  color: var(--brown-dark); font-weight: 700; font-size: 22px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #fbf8f2;
+}
