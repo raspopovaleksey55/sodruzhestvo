@@ -52,15 +52,16 @@ header.site .wrap {
   padding: 18px 20px;
   flex-wrap: wrap;
 }
-.brand { display: flex; align-items: center; gap: 14px; }
-.brand .mark {
-  width: auto; height: 65px; flex: 0 0 auto;
+.brand { display: block; max-width: 430px; }
+.brand .legal {
   display: block;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 12px; line-height: 1.35; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 3px;
 }
 .brand b {
-  display: block; font-size: 20px; line-height: 1.2; color: var(--brown-dark);
+  display: block; font-size: 19px; line-height: 1.25; color: var(--brown-dark);
 }
-.brand span { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 13px; color: var(--muted); }
 
 nav.main { font-family: "Segoe UI", Tahoma, sans-serif; }
 nav.main ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; }
@@ -165,14 +166,7 @@ footer.site .small { color: #bfae95; font-size: 13px; }
   .hero h1 { font-size: 27px; }
   .facts th { width: auto; display: block; border-bottom: none; padding-bottom: 2px; }
   .facts td { display: block; padding-top: 0; }
-}
-
-/* знак организации без картинки — текстовый */
-.brand .mark.text {
-  width: 58px; height: 58px; flex: 0 0 auto;
-  display: flex; align-items: center; justify-content: center;
-  border: 2px solid var(--brown); border-radius: 6px;
-  color: var(--brown-dark); font-weight: 700; font-size: 22px;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #fbf8f2;
+  .brand { max-width: none; }
+  .brand b { font-size: 17px; }
+  .brand .legal { font-size: 11px; }
 }
